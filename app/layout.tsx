@@ -30,6 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="google-adsense-account" content="ca-pub-8022371531355895" />
+        <meta name="google-site-verification" content="jpnp6ZZrsofA3VgIxeLKbhmv8jmy0LWur8uvAOMXS_M" />
       </head>
       <body className="min-h-full">{children}</body>
     </html>
