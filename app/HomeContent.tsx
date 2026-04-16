@@ -26,25 +26,32 @@ export default function HomeContent() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 24;
 
   const categories = ['All', ...Object.keys(categoryIcons)];
 
-  const filteredAndGroupedTools = useMemo(() => {
-    const filtered = data.filter((tool: Tool) => {
+  const filteredTools = useMemo(() => {
+    return data.filter((tool: Tool) => {
       const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                         tool.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-
-    const grouped = filtered.reduce((acc: Record<string, Tool[]>, tool: Tool) => {
-      if (!acc[tool.category]) acc[tool.category] = [];
-      acc[tool.category].push(tool);
-      return acc;
-    }, {});
-
-    return grouped;
   }, [searchTerm, selectedCategory]);
+
+  const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory]);
+
+  const paginatedTools = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return filteredTools.slice(startIndex, endIndex);
+  }, [filteredTools, currentPage, itemsPerPage]);
 
   // Simulate loading for smooth UX
   useEffect(() => {
@@ -156,50 +163,127 @@ export default function HomeContent() {
             </ul>
           </div>
 
-          {Object.entries(filteredAndGroupedTools).map(([category, items]: [string, Tool[]]) => (
-            <div key={category} style={{ marginBottom: '32px' }}>
-              <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>
-                {categoryIcons[category] || '🔌'} {category} Appliances ({items.length})
-              </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
-                {items.map((tool: Tool) => (
-                  <Link
-                    key={tool.slug}
-                    href={`/${tool.slug}`}
-                    prefetch={true}
-                    style={{ 
-                      backgroundColor: 'rgba(255,255,255,0.05)', 
-                      border: '1px solid rgba(255,255,255,0.1)', 
-                      borderRadius: '8px', 
-                      padding: '16px',
-                      display: 'block',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                      transition: 'transform 0.2s, background-color 0.2s'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
-                  >
-                    <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', marginBottom: '4px' }}>{tool.name}</h3>
-                    <p style={{ color: '#9ca3af', fontSize: '14px' }}>{tool.wattage}W</p>
-                    <p style={{ color: '#60a5fa', fontSize: '12px', marginTop: '8px' }}>Calculate cost →</p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+            {paginatedTools.map((tool: Tool) => (
+              <Link
+                key={tool.slug}
+                href={`/${tool.slug}`}
+                prefetch={true}
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '8px',
+                  padding: '16px',
+                  display: 'block',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'transform 0.2s, background-color 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '20px' }}>{categoryIcons[tool.category] || '🔌'}</span>
+                  <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: 'white', margin: 0 }}>{tool.name}</h3>
+                </div>
+                <p style={{ color: '#9ca3af', fontSize: '14px', margin: '4px 0' }}>{tool.wattage}W</p>
+                <p style={{ color: '#60a5fa', fontSize: '12px', margin: '8px 0 0 0' }}>{tool.category}</p>
+                <p style={{ color: '#3b82f6', fontSize: '12px', marginTop: '8px' }}>Calculate cost →</p>
+              </Link>
+            ))}
+          </div>
 
-          {Object.keys(filteredAndGroupedTools).length === 0 && (
+          {paginatedTools.length === 0 && (
             <div style={{ textAlign: 'center', padding: '48px 16px' }}>
               <p style={{ color: '#9ca3af', fontSize: '16px' }}>No appliances found matching your search.</p>
             </div>
           )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', marginBottom: '32px', flexWrap: 'wrap' }}>
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                style={{
+                  padding: '8px 16px',
+                  backgroundColor: currentPage === 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '6px',
+                  color: currentPage === 1 ? '#6b7280' : 'white',
+                  cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+                  fontSize: '14px'
+                }}
+              >
+                Previous
+              </button>
+
+              {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+                let pageNum: number | string;
+                if (totalPages <= 7) {
+                  pageNum = i + 1;
+                } else if (currentPage <= 4) {
+                  pageNum = i < 5 ? i + 1 : (i === 5 ? '...' : totalPages);
+                } else if (currentPage >= totalPages - 3) {
+                  pageNum = i < 2 ? (i === 0 ? 1 : '...') : totalPages - 6 + i;
+                } else {
+                  pageNum = i === 0 ? 1 : (i === 1 ? '...' : (i === 5 ? '...' : totalPages));
+                  if (i === 2 || i === 3 || i === 4) {
+                    pageNum = currentPage - 3 + i;
+                  }
+                }
+
+                if (pageNum === '...') {
+                  return <span key={`ellipsis-${i}`} style={{ color: '#9ca3af', padding: '8px' }}>...</span>;
+                }
+
+                return (
+                  <button
+                    key={pageNum}
+                    onClick={() => setCurrentPage(pageNum as number)}
+                    style={{
+                      padding: '8px 12px',
+                      backgroundColor: currentPage === pageNum ? 'rgba(59, 130, 246, 0.3)' : 'rgba(255,255,255,0.05)',
+                      border: `1px solid ${currentPage === pageNum ? 'rgba(59, 130, 246, 0.5)' : 'rgba(255,255,255,0.1)'}`,
+                      borderRadius: '6px',
+                      color: currentPage === pageNum ? '#3b82f6' : 'white',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      minWidth: '40px'
+                    }}
+                  >
+                    {pageNum}
+                  </button>
+                );
+              })}
+
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                style={{
+                  padding: '8px 16px',
+                  backgroundColor: currentPage === totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: '6px',
+                  color: currentPage === totalPages ? '#6b7280' : 'white',
+                  cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+                  fontSize: '14px'
+                }}
+              >
+                Next
+              </button>
+            </div>
+          )}
+
+          <div style={{ textAlign: 'center', color: '#9ca3af', fontSize: '14px', marginBottom: '32px' }}>
+            Showing {paginatedTools.length > 0 ? (currentPage - 1) * itemsPerPage + 1 : 0} - {Math.min(currentPage * itemsPerPage, filteredTools.length)} of {filteredTools.length} appliances
+          </div>
 
           <div style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
             <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: 'white', marginBottom: '12px' }}>
