@@ -7,10 +7,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/about-us',
   },
-  other: {
-    'google-adsense-account': 'ca-pub-8022371531355895',
-    'google-site-verification': 'jpnp6ZZrsofA3VgIxeLKbhmv8jmy0LWur8uvAOMXS_M',
-  },
 };
 
 export default function AboutUs() {
