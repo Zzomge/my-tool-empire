@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us - Electricity Cost Calculator Philippines',
@@ -80,6 +81,23 @@ export default function AboutUs() {
             </p>
           </section>
         </div>
+
+        <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+          <div className="flex justify-center gap-8 flex-wrap mb-4">
+            <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              Home
+            </Link>
+            <Link href="/contact-us" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              Contact Us
+            </Link>
+            <Link href="/privacy-policy" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              Privacy Policy
+            </Link>
+          </div>
+          <p className="text-gray-500 dark:text-gray-400 text-xs">
+            © 2026 Electricity Cost Calculator Philippines. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );

@@ -216,6 +216,23 @@ export default function HomeContent() {
               Our calculator helps you understand how much each appliance costs to run, so you can make informed decisions about your energy usage and save money on your electric bill.
             </p>
           </div>
+
+          <footer style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap', marginBottom: '16px' }}>
+              <Link href="/about-us" style={{ color: '#60a5fa', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>
+                About Us
+              </Link>
+              <Link href="/contact-us" style={{ color: '#60a5fa', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>
+                Contact Us
+              </Link>
+              <Link href="/privacy-policy" style={{ color: '#60a5fa', textDecoration: 'none', fontSize: '14px', transition: 'color 0.2s' }}>
+                Privacy Policy
+              </Link>
+            </div>
+            <p style={{ color: '#6b7280', fontSize: '12px' }}>
+              © 2026 Electricity Cost Calculator Philippines. All rights reserved.
+            </p>
+          </footer>
         </div>
       </div>
     </>
