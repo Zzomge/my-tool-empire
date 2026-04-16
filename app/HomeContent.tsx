@@ -56,7 +56,7 @@ export default function HomeContent() {
     '@type': 'WebApplication',
     name: 'Electricity Cost Calculator Philippines',
     description: 'Free electricity cost calculator for home appliances in the Philippines',
-    url: 'https://yourdomain.com',
+    url: 'https://meralcocalc.vercel.app',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Web',
     offers: {

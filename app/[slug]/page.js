@@ -68,7 +68,7 @@ export default async function ToolPage({ params }) {
     '@type': 'WebApplication',
     name: `${item.name} Electricity Cost Calculator`,
     description: `Calculate electricity costs for ${item.name} in the Philippines. Based on ${item.wattage}W power consumption.`,
-    url: `https://yourdomain.com/${slug}`,
+    url: `https://meralcocalc.vercel.app/${slug}`,
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Web',
     offers: {
