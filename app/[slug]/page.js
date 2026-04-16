@@ -26,7 +26,11 @@ export async function generateMetadata({ params }) {
   if (!item) {
     return {
       title: 'Tool Not Found',
-      description: 'The requested tool was not found.'
+      description: 'The requested tool was not found.',
+      other: {
+        'google-adsense-account': 'ca-pub-8022371531355895',
+        'google-site-verification': 'jpnp6ZZrsofA3VgIxeLKbhmv8jmy0LWur8uvAOMXS_M',
+      },
     };
   }
 
@@ -41,6 +45,10 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `/${slug}`,
+    },
+    other: {
+      'google-adsense-account': 'ca-pub-8022371531355895',
+      'google-site-verification': 'jpnp6ZZrsofA3VgIxeLKbhmv8jmy0LWur8uvAOMXS_M',
     },
   };
 }
