@@ -7703,10 +7703,7 @@
     "detailedGuide": "Commercial kitchen switches control power for kitchen appliances. They're essential for restaurants. In the Philippines, commercial kitchen switches are used in restaurants.",
     "comparison": "Commercial switch (0W) vs Regular switch (0W): Similar energy use.",
     "faq": [
-      "How much electricity does a commercial kitchen switch use?",
-      "Are commercial kitchen switches worth it?",
-      "How much does it cost to install a commercial kitchen switch in the Philippines?",
-      "When should I choose a commercial kitchen switch?"
+      "How much electricity does a commercial kitchen switch use?"
     ]
   },
   {
@@ -7722,6 +7719,306 @@
       "Are commercial kitchen breakers worth it?",
       "How much does it cost to install a commercial kitchen breaker in the Philippines?",
       "When should I choose a commercial kitchen breaker?"
+    ]
+  },
+  {
+    "name": "Electric Fan",
+    "slug": "electric-fan",
+    "wattage": 60,
+    "category": "Cooling",
+    "description": "Electric fans are essential for staying cool in the Philippine climate. Calculate the electricity costs of running different types of fans.",
+    "detailedGuide": "Electric fans are the most common cooling appliance in Filipino households. Stand fans use 50-70W, ceiling fans use 60-100W, and table fans use 30-50W. They're much more energy-efficient than air conditioners, using 90% less electricity. In the Philippines, fans are used year-round due to the tropical climate.",
+    "comparison": "Electric fan (60W for 8 hours) vs Air conditioner (1000W for 8 hours): Fans use 94% less electricity, saving approximately ₱25-35 daily.",
+    "faq": [
+      "How much electricity does an electric fan use in the Philippines?",
+      "Is it cheaper to use a fan or air conditioner?",
+      "What is the most energy-efficient fan type?",
+      "How can I reduce my fan's electricity consumption?"
+    ]
+  },
+  {
+    "name": "Stand Fan",
+    "slug": "stand-fan",
+    "wattage": 65,
+    "category": "Cooling",
+    "description": "Stand fans provide portable cooling for any room. Learn about the electricity costs and energy efficiency of stand fans.",
+    "detailedGuide": "Stand fans are popular in Filipino homes due to their portability and oscillation feature. They typically use 60-70W on high speed and 30-40W on low speed. Modern stand fans come with remote controls and multiple speed settings. They're ideal for bedrooms and living areas.",
+    "comparison": "Stand fan (65W for 8 hours) vs Ceiling fan (80W for 8 hours): Stand fans use slightly less electricity but cover a smaller area.",
+    "faq": [
+      "How much does it cost to run a stand fan in the Philippines?",
+      "Are stand fans energy-efficient?",
+      "What is the best stand fan brand in the Philippines?",
+      "Does fan speed affect electricity consumption?"
+    ]
+  },
+  {
+    "name": "Ceiling Fan",
+    "slug": "ceiling-fan",
+    "wattage": 75,
+    "category": "Cooling",
+    "description": "Ceiling fans provide efficient whole-room cooling. Calculate the electricity costs and benefits of ceiling fans.",
+    "detailedGuide": "Ceiling fans are the most efficient fan type for cooling large areas. They use 60-100W depending on size and speed. In the Philippines, ceiling fans are common in living rooms and bedrooms. They circulate air effectively and can make rooms feel 4-6 degrees cooler.",
+    "comparison": "Ceiling fan (75W for 8 hours) vs Air conditioner (1000W for 8 hours): Ceiling fans use 92.5% less electricity.",
+    "faq": [
+      "How much electricity does a ceiling fan use?",
+      "Are ceiling fans worth it in the Philippines?",
+      "What size ceiling fan do I need?",
+      "Do ceiling fans reduce air conditioning costs?"
+    ]
+  },
+  {
+    "name": "Table Fan",
+    "slug": "table-fan",
+    "wattage": 40,
+    "category": "Cooling",
+    "description": "Table fans provide personal cooling for desks and small spaces. Learn about the electricity costs of table fans.",
+    "detailedGuide": "Table fans are compact and perfect for personal cooling. They use 30-50W, making them the most energy-efficient fan type. In the Philippines, table fans are popular for home offices and study areas. They provide direct airflow and are highly portable.",
+    "comparison": "Table fan (40W for 8 hours) vs Stand fan (65W for 8 hours): Table fans use 38% less electricity.",
+    "faq": [
+      "How much electricity does a table fan use?",
+      "Are table fans energy-efficient?",
+      "What is the best table fan for small rooms?",
+      "Can table fans cool a whole room?"
+    ]
+  },
+  {
+    "name": "Exhaust Fan",
+    "slug": "exhaust-fan",
+    "wattage": 50,
+    "category": "Cooling",
+    "description": "Exhaust fans remove hot air and odors from bathrooms and kitchens. Calculate the electricity costs of exhaust fans.",
+    "detailedGuide": "Exhaust fans are essential for ventilation in Filipino homes, especially in bathrooms and kitchens. They use 40-60W and are typically run for shorter periods. Proper ventilation helps reduce humidity and prevent mold growth. In the Philippines, exhaust fans are commonly used in condo units.",
+    "comparison": "Exhaust fan (50W for 1 hour) vs Open window (0W): Exhaust fans use electricity but provide necessary ventilation.",
+    "faq": [
+      "How much electricity does an exhaust fan use?",
+      "Are exhaust fans necessary in the Philippines?",
+      "How long should I run my exhaust fan?",
+      "Do exhaust fans reduce humidity?"
+    ]
+  },
+  {
+    "name": "Tower Fan",
+    "slug": "tower-fan",
+    "wattage": 55,
+    "category": "Cooling",
+    "description": "Tower fans offer sleek design and space-saving cooling. Learn about the electricity costs of tower fans.",
+    "detailedGuide": "Tower fans are modern, space-saving cooling solutions. They use 50-60W and often come with ionizers and remote controls. In the Philippines, tower fans are popular in modern condos and apartments. They provide oscillating airflow and take up minimal floor space.",
+    "comparison": "Tower fan (55W for 8 hours) vs Stand fan (65W for 8 hours): Tower fans use 15% less electricity.",
+    "faq": [
+      "How much electricity does a tower fan use?",
+      "Are tower fans better than stand fans?",
+      "What is the best tower fan brand in the Philippines?",
+      "Do tower fans cool better than regular fans?"
+    ]
+  },
+  {
+    "name": "Box Fan",
+    "slug": "box-fan",
+    "wattage": 70,
+    "category": "Cooling",
+    "description": "Box fans provide powerful airflow for large spaces. Calculate the electricity costs of box fans.",
+    "detailedGuide": "Box fans are powerful and move large volumes of air. They use 60-80W and are ideal for large rooms or window placement. In the Philippines, box fans are often used to draw in cool evening air. They're durable and provide excellent airflow.",
+    "comparison": "Box fan (70W for 8 hours) vs Tower fan (55W for 8 hours): Box fans use 27% more electricity but move more air.",
+    "faq": [
+      "How much electricity does a box fan use?",
+      "Are box fans good for large rooms?",
+      "Can box fans be used in windows?",
+      "What is the most powerful box fan?"
+    ]
+  },
+  {
+    "name": "Washing Machine",
+    "slug": "washing-machine",
+    "wattage": 500,
+    "category": "Laundry",
+    "description": "Washing machines are essential for clean clothes. Calculate the electricity costs of running washing machines in the Philippines.",
+    "detailedGuide": "Washing machines typically use 400-600W per cycle. Top-load machines use more water and energy than front-loaders. In the Philippines, washing machines are used 3-4 times per week on average. Modern inverter washing machines can save 30-50% on electricity compared to conventional models.",
+    "comparison": "Washing machine (500W for 1 hour) vs Hand washing (0W): Machines use electricity but save time and water.",
+    "faq": [
+      "How much electricity does a washing machine use?",
+      "Are front-load washing machines more energy-efficient?",
+      "What is the best washing machine brand in the Philippines?",
+      "Does washing machine capacity affect electricity use?"
+    ]
+  },
+  {
+    "name": "Clothes Dryer",
+    "slug": "clothes-dryer",
+    "wattage": 3000,
+    "category": "Laundry",
+    "description": "Clothes dryers quickly dry laundry. Learn about the high electricity costs of clothes dryers.",
+    "detailedGuide": "Clothes dryers are among the most energy-intensive home appliances, using 2500-5000W. In the Philippines, clothes dryers are less common due to the tropical climate and high electricity costs. Most Filipinos prefer air-drying clothes. Dryers can add ₱50-100 per cycle to electric bills.",
+    "comparison": "Clothes dryer (3000W for 1 hour) vs Air drying (0W): Dryers use significant electricity but offer convenience.",
+    "faq": [
+      "How much electricity does a clothes dryer use?",
+      "Are clothes dryers worth it in the Philippines?",
+      "What is the most energy-efficient dryer?",
+      "Can I reduce my dryer's electricity consumption?"
+    ]
+  },
+  {
+    "name": "Electric Iron",
+    "slug": "electric-iron",
+    "wattage": 1000,
+    "category": "Laundry",
+    "description": "Electric irons remove wrinkles from clothes. Calculate the electricity costs of ironing.",
+    "detailedGuide": "Electric irons use 800-1200W and are typically used for 30-60 minutes per week. Steam irons use slightly more electricity than dry irons. In the Philippines, ironing is a common household chore. Modern irons have auto-shutoff features for safety and energy savings.",
+    "comparison": "Electric iron (1000W for 30 mins) vs No ironing (0W): Ironing uses electricity but is necessary for well-maintained clothes.",
+    "faq": [
+      "How much electricity does an electric iron use?",
+      "Are steam irons more energy-efficient?",
+      "What is the best electric iron brand in the Philippines?",
+      "Does iron temperature affect electricity use?"
+    ]
+  },
+  {
+    "name": "Water Dispenser",
+    "slug": "water-dispenser",
+    "wattage": 100,
+    "category": "Kitchen",
+    "description": "Water dispensers provide hot and cold water. Calculate the electricity costs of running water dispensers.",
+    "detailedGuide": "Water dispensers use 80-120W for cooling and 500W for heating. They run continuously to maintain water temperature. In the Philippines, water dispensers are common in offices and homes. The heating function uses the most electricity. Energy-saving models can reduce consumption by 30%.",
+    "comparison": "Water dispenser (100W continuous) vs Refrigerator water (0W extra): Dispensers add to electricity costs but provide convenience.",
+    "faq": [
+      "How much electricity does a water dispenser use?",
+      "Are water dispensers energy-efficient?",
+      "Should I turn off my water dispenser when not in use?",
+      "What is the most energy-efficient water dispenser?"
+    ]
+  },
+  {
+    "name": "Water Heater",
+    "slug": "water-heater",
+    "wattage": 3000,
+    "category": "Kitchen",
+    "description": "Water heaters provide hot water for showers. Calculate the high electricity costs of water heaters.",
+    "detailedGuide": "Electric water heaters use 2000-4000W and are typically used for 15-30 minutes per shower. In the Philippines, instant water heaters are popular due to the warm climate. They heat water on demand rather than storing hot water, which is more energy-efficient. Tankless models can save 20-30% on electricity.",
+    "comparison": "Water heater (3000W for 20 mins) vs Cold shower (0W): Water heaters use significant electricity but provide comfort.",
+    "faq": [
+      "How much electricity does a water heater use?",
+      "Are instant water heaters more energy-efficient?",
+      "What is the best water heater brand in the Philippines?",
+      "Can I reduce my water heater's electricity consumption?"
+    ]
+  },
+  {
+    "name": "Electric Shower Heater",
+    "slug": "electric-shower-heater",
+    "wattage": 3500,
+    "category": "Kitchen",
+    "description": "Electric shower heaters provide instant hot water. Calculate the electricity costs of shower heaters.",
+    "detailedGuide": "Electric shower heaters use 3000-4000W and heat water as it flows through the unit. They're very popular in the Philippines for instant hot showers. They're more energy-efficient than tank water heaters since they only heat water when needed. A 10-minute shower typically costs ₱8-12 in electricity.",
+    "comparison": "Shower heater (3500W for 10 mins) vs Cold shower (0W): Shower heaters use electricity but provide hot water comfort.",
+    "faq": [
+      "How much electricity does a shower heater use?",
+      "Are electric shower heaters safe?",
+      "What is the best shower heater brand in the Philippines?",
+      "Do shower heaters increase electric bills significantly?"
+    ]
+  },
+  {
+    "name": "Blender",
+    "slug": "blender",
+    "wattage": 400,
+    "category": "Kitchen",
+    "description": "Blenders mix and puree foods. Calculate the electricity costs of using blenders.",
+    "detailedGuide": "Blenders use 300-600W and are typically used for short periods (1-5 minutes). High-performance blenders can use up to 1200W. In the Philippines, blenders are popular for making smoothies, shakes, and pureeing local dishes. They're energy-efficient due to short usage times.",
+    "comparison": "Blender (400W for 2 mins) vs Hand blending (0W): Blenders use minimal electricity due to short usage time.",
+    "faq": [
+      "How much electricity does a blender use?",
+      "Are high-powered blenders worth it?",
+      "What is the best blender brand in the Philippines?",
+      "Does blender speed affect electricity consumption?"
+    ]
+  },
+  {
+    "name": "Hand Mixer",
+    "slug": "hand-mixer",
+    "wattage": 250,
+    "category": "Kitchen",
+    "description": "Hand mixers beat and mix ingredients. Calculate the electricity costs of hand mixers.",
+    "detailedGuide": "Hand mixers use 200-300W and are used for baking and cooking. They're more energy-efficient than stand mixers due to lower wattage. In the Philippines, hand mixers are popular for home baking. They're portable and easy to store.",
+    "comparison": "Hand mixer (250W for 5 mins) vs Stand mixer (500W for 5 mins): Hand mixers use 50% less electricity.",
+    "faq": [
+      "How much electricity does a hand mixer use?",
+      "Are hand mixers better than stand mixers?",
+      "What is the best hand mixer brand in the Philippines?",
+      "Can hand mixers handle heavy dough?"
+    ]
+  },
+  {
+    "name": "Stand Mixer",
+    "slug": "stand-mixer",
+    "wattage": 500,
+    "category": "Kitchen",
+    "description": "Stand mixers provide powerful mixing for baking. Calculate the electricity costs of stand mixers.",
+    "detailedGuide": "Stand mixers use 400-600W and are essential for serious bakers. They're more powerful than hand mixers but use more electricity. In the Philippines, stand mixers are popular among home bakers and small bakeries. They can handle heavy doughs and large batches.",
+    "comparison": "Stand mixer (500W for 10 mins) vs Hand mixer (250W for 10 mins): Stand mixers use 100% more electricity but are more powerful.",
+    "faq": [
+      "How much electricity does a stand mixer use?",
+      "Are stand mixers worth the investment?",
+      "What is the best stand mixer brand in the Philippines?",
+      "Do stand mixers save time in baking?"
+    ]
+  },
+  {
+    "name": "Food Processor",
+    "slug": "food-processor",
+    "wattage": 600,
+    "category": "Kitchen",
+    "description": "Food processors chop, slice, and dice foods. Calculate the electricity costs of food processors.",
+    "detailedGuide": "Food processors use 500-700W and are versatile kitchen tools. They can replace multiple other appliances. In the Philippines, food processors are gaining popularity for meal prep. They're energy-efficient due to short usage times and can significantly reduce prep time.",
+    "comparison": "Food processor (600W for 3 mins) vs Manual chopping (0W): Processors use minimal electricity but save significant time.",
+    "faq": [
+      "How much electricity does a food processor use?",
+      "Are food processors worth it?",
+      "What is the best food processor brand in the Philippines?",
+      "Can food processors replace other appliances?"
+    ]
+  },
+  {
+    "name": "Toaster",
+    "slug": "toaster",
+    "wattage": 800,
+    "category": "Kitchen",
+    "description": "Toasters brown bread and bagels. Calculate the electricity costs of using toasters.",
+    "detailedGuide": "Toasters use 700-900W and typically run for 2-4 minutes per use. They're very energy-efficient due to short usage times. In the Philippines, toasters are becoming more popular for Western-style breakfasts. Modern toasters have multiple browning settings and wide slots.",
+    "comparison": "Toaster (800W for 3 mins) vs Stove toasting (1500W for 3 mins): Toasters use 47% less electricity.",
+    "faq": [
+      "How much electricity does a toaster use?",
+      "Are toasters energy-efficient?",
+      "What is the best toaster brand in the Philippines?",
+      "Does toaster setting affect electricity use?"
+    ]
+  },
+  {
+    "name": "Toaster Oven",
+    "slug": "toaster-oven",
+    "wattage": 1200,
+    "category": "Kitchen",
+    "description": "Toaster ovens bake, broil, and toast. Calculate the electricity costs of toaster ovens.",
+    "detailedGuide": "Toaster ovens use 1000-1500W and are more versatile than regular toasters. They can small batches of food more efficiently than full-sized ovens. In the Philippines, toaster ovens are popular in small kitchens and condos. They preheat faster than conventional ovens.",
+    "comparison": "Toaster oven (1200W for 15 mins) vs Regular oven (2000W for 15 mins): Toaster ovens use 40% less electricity.",
+    "faq": [
+      "How much electricity does a toaster oven use?",
+      "Are toaster ovens better than regular ovens?",
+      "What is the best toaster oven brand in the Philippines?",
+      "Can toaster ovens replace regular ovens?"
+    ]
+  },
+  {
+    "name": "Slow Cooker",
+    "slug": "slow-cooker",
+    "wattage": 200,
+    "category": "Kitchen",
+    "description": "Slow cookers cook food over long periods. Calculate the electricity costs of slow cookers.",
+    "detailedGuide": "Slow cookers use 150-250W and run for 4-8 hours. Despite long cooking times, they're energy-efficient due to low wattage. In the Philippines, slow cookers are popular for soups, stews, and local dishes like nilaga. They use less electricity than stove-top cooking for long durations.",
+    "comparison": "Slow cooker (200W for 6 hours) vs Stove pot (1500W for 2 hours): Slow cookers use 60% less electricity.",
+    "faq": [
+      "How much electricity does a slow cooker use?",
+      "Are slow cookers energy-efficient?",
+      "What is the best slow cooker brand in the Philippines?",
+      "Do slow cookers use a lot of electricity?"
     ]
   }
 ]
