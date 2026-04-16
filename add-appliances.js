@@ -2,7 +2,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 // ตั้งค่าจำนวน appliances ที่ต้องการเพิ่ม
-const TARGET_COUNT = 500;
+const TARGET_COUNT = 1000;
 
 console.log('='.repeat(60));
 console.log('ADD APPLIANCES - ALL IN ONE SCRIPT');

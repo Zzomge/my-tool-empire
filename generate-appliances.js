@@ -31,7 +31,7 @@ function generateAppliance(template, index) {
 const categories = ['Kitchen', 'Entertainment', 'Cooling', 'Office', 'Health', 'Laundry', 'Cleaning'];
 const newAppliances = [];
 
-const appliancesPerCategory = Math.ceil(500 / categories.length);
+const appliancesPerCategory = Math.ceil(1000 / categories.length);
 
 // Base templates for each category
 const baseTemplates = {
@@ -633,7 +633,7 @@ let generatedCount = 0;
 let attemptCount = 0;
 const maxAttempts = 10000; // Prevent infinite loop
 
-while (generatedCount < 500 && attemptCount < maxAttempts) {
+while (generatedCount < 1000 && attemptCount < maxAttempts) {
   attemptCount++;
   
   // Select random category
